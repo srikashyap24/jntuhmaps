@@ -1,84 +1,195 @@
-/* Reset some default styles */
-* {
+/* General Styles */
+.college-logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures proper alignment */
+    margin-right: 20px; /* Space between logo and text */
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
     background-color: #f4f4f9;
-    color: #333;
 }
 
 header {
-    background-color: #004080;
-    color: #fff;
-    padding: 20px;
+    background-color: #3f51b5;
+    color: #ffffff;
+    padding: 20px 10px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Header Styles */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    padding: 10px 0;
 }
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+.college-name {
+    text-align: center; /* Center text alignment */
 }
 
-main {
-    padding: 20px;
+header h1 {
+    font-size: 1.4em; /* Adjust title size */
+    color: #ffffff; /* Title color */
+    margin-bottom: 5px;
 }
 
-.building-list {
-    max-width: 800px;
-    margin: 0 auto;
+header p {
+    font-size: 1em; /* Adjust subtitle size */
+    color: #cccccc; /* Subtitle color */
+    margin: 0;
 }
 
-ul {
-    list-style-type: none;
+h1, h2 {
+    margin: 0;
+    padding: 10px 0;
+    color: #ffffff;
 }
 
-li {
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+h2 {
+    font-size: 1.8rem;
+    color: #3f51b5;
+    margin-bottom: 15px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #283593;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-button {
+    background-color: #3f51b5;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #5c6bc0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 5px;
     overflow: hidden;
-    transition: transform 0.2s;
 }
 
-li:hover {
-    transform: scale(1.02);
+.dropdown-content a {
+    color: #3f51b5;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #e0e0e0;
+}
+
+.menu:hover .dropdown-content {
+    display: block;
+}
+
+#searchBar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    transition: width 0.3s ease-in-out;
+}
+
+#searchBar:focus {
+    outline: none;
+    width: 250px;
+}
+
+/* Building List Styles */
+.building-list {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.building-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.building-list li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.building-list li:last-child {
+    border-bottom: none;
+}
+
+.building-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.building-info:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.building-info h2 {
+    font-size: 1.2rem;
+    color: #3f51b5;
+}
+
+.building-info p {
+    margin: 0;
+    color: #666666;
+    font-size: 0.9rem;
 }
 
 a {
     text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 15px;
 }
 
-a:hover {
-    background-color: #e0e0e0;
-}
-
-.building-info {
-    padding: 15px;
-}
-
-.building-info h2 {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-}
-
-.building-info p {
-    font-size: 1em;
-    color: #666;
-}
-
+/* Footer Styles */
 footer {
-    background-color: #004080;
-    color: #fff;
+    background-color: #283593;
+    color: #ffffff;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
+    padding: 15px 0;
+    position: relative;
     bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }
