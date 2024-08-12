@@ -6,19 +6,24 @@ document.getElementById('searchBar').addEventListener('keyup', function() {
 
     buildingSections.forEach(section => {
         let hasVisibleBuildings = false;
-        const buildings = section.querySelectorAll('.building-info');
+        const listItems = section.querySelectorAll('li');
 
-        buildings.forEach(building => {
-            const buildingName = building.querySelector('h2').textContent.toLowerCase();
-            if (buildingName.includes(searchString)) {
-                building.parentElement.style.display = ''; // Show matching buildings
-                hasVisibleBuildings = true;
+        listItems.forEach(item => {
+            const buildingInfo = item.querySelector('.building-info');
+            if (buildingInfo) {
+                const buildingName = buildingInfo.querySelector('h2').textContent.toLowerCase();
+                if (buildingName.includes(searchString)) {
+                    item.style.display = ''; // Show matching building
+                    hasVisibleBuildings = true;
+                } else {
+                    item.style.display = 'none'; // Hide non-matching building
+                }
             } else {
-                building.parentElement.style.display = 'none'; // Hide non-matching buildings
+                item.style.display = 'none'; // Hide empty list items
             }
         });
 
         // Hide the entire section if no buildings are visible
-        section.parentElement.style.display = hasVisibleBuildings ? '' : 'none';
+        section.style.display = hasVisibleBuildings ? '' : 'none';
     });
 });
