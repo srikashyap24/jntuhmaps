@@ -5,7 +5,7 @@ document.getElementById('searchBar').addEventListener('keyup', function() {
     const buildingSections = document.querySelectorAll('.building-list ul');
 
     buildingSections.forEach(section => {
-        let hasVisibleBuildings = false;
+        let hasVisibleItems = false;
         const listItems = section.querySelectorAll('li');
 
         listItems.forEach(item => {
@@ -14,7 +14,7 @@ document.getElementById('searchBar').addEventListener('keyup', function() {
                 const buildingName = buildingInfo.querySelector('h2').textContent.toLowerCase();
                 if (buildingName.includes(searchString)) {
                     item.style.display = ''; // Show matching building
-                    hasVisibleBuildings = true;
+                    hasVisibleItems = true;
                 } else {
                     item.style.display = 'none'; // Hide non-matching building
                 }
@@ -23,7 +23,7 @@ document.getElementById('searchBar').addEventListener('keyup', function() {
             }
         });
 
-        // Hide the entire section if no buildings are visible
-        section.style.display = hasVisibleBuildings ? '' : 'none';
+        // Hide the entire section if no list items are visible
+        section.style.display = hasVisibleItems ? '' : 'none';
     });
 });
