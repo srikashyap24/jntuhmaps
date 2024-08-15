@@ -2,11 +2,11 @@
 
 document.getElementById('searchBar').addEventListener('keyup', function() {
     const searchString = this.value.toLowerCase();
-    const buildingSections = document.querySelectorAll('.building-list ul');
+    const buildingSections = document.querySelectorAll('.building-list');
 
     buildingSections.forEach(section => {
         let hasVisibleItems = false;
-        const listItems = section.querySelectorAll('li');
+        const listItems = section.querySelectorAll('main a');
 
         listItems.forEach(item => {
             const buildingInfo = item.querySelector('.building-info');
