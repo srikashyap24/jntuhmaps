@@ -98,14 +98,15 @@ nav.navbar {
     border-radius: 5px;
 }
 
-main {
-    padding: 20px;
-}
+/* main {
+    padding: 0px;
+} */
 
-.building-list {
+/* .building-list {
     max-width: 800px;
     margin: 0 auto;
-}
+    
+} */
 
 .building-list h2 {
     text-align: center;
@@ -113,28 +114,31 @@ main {
     font-size: 1.5em;
 }
 
-ul {
+/* ul {
     list-style-type: none;
     padding: 0;
-}
+} */
 
-li {
+/* li {
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.2s;
-}
+} */
 
-li:hover {
+/* li:hover {
     transform: scale(1.02);
-}
+} */
 
 main a {
     text-decoration: none;
     color:  #004080;
     display: block;
     padding: 15px;
+    /* border: 1px solid #ddd; */
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 a:hover {
@@ -149,6 +153,7 @@ a:hover {
 .building-info h2 {
     font-size: 1.2em;
     margin-bottom: 5px;
+    
 }
 
 .building-info p {
@@ -160,11 +165,12 @@ main img{
   width: 300px;
   height: 200px;
   object-fit: cover;
-
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
-main div{
+/* main div{
     justify-content: center;
-}
+} */
 
 footer {
     background-color: #004080;
@@ -176,53 +182,23 @@ footer {
     bottom: 0;
 }
 
-/* Responsive Styles */
-@media (min-width: 600px) {
-    .header-content {
-        flex-direction: row;
-    }
-
-    .college-logo {
-        width: 100px; /* Larger size for larger screens */
-        margin-bottom: 0;
-        margin-right: 20px;
-    }
-
-    .college-name h1 {
-        font-size: 1.5em;
-    }
-
-    .college-name p {
-        font-size: 1em;
-    }
-
-    nav.navbar {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    #searchBar {
-        width: 300px;
-        margin-top: 0;
-    }
+/* .container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
 }
 
-@media (min-width: 768px) {
-    .college-name h1 {
-        font-size: 1.8em;
-    }
+.col-12 .col-md-4 {
+    flex: 1; 
+    padding: 10px;
+    box-sizing: border-box; 
+    border: 1px solid #ccc; 
+    margin: 15px; 
+} */
 
-    .college-name p {
-        font-size: 1.1em;
-    }
-}
-
-@media (min-width: 992px) {
-    .college-name h1 {
-        font-size: 2em;
-    }
-
-    .college-name p {
-        font-size: 1.2em;
+@media only screen and (max-device-width: 480px)
+{
+    main a{
+        size: 0.6rem;
     }
 }
