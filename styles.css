@@ -98,9 +98,9 @@ nav.navbar {
     border-radius: 5px;
 }
 
-/* main {
-    padding: 0px;
-} */
+main {
+    padding-bottom: 50px;
+}
 
 /* .building-list {
     max-width: 800px;
